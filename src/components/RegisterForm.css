@@ -1,0 +1,448 @@
+/* =========================
+   REGISTER CARD
+========================= */
+
+.register-card {
+  width: 320px;
+
+  padding: 26px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  position: relative;
+
+  z-index: 10;
+}
+
+
+/* =========================
+   REGISTER HEADER
+========================= */
+
+.register-header {
+  margin-bottom: 20px;
+}
+
+.register-tag {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  margin-bottom: 10px;
+
+  border-radius: 50px;
+
+  background: rgba(124, 58, 237, 0.25);
+
+  border: 1px solid rgba(167, 139, 250, 0.3);
+
+  color: #c4b5fd;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.register-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+.register-header p {
+  margin: 7px 0 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  color: white;
+
+  font-size: 14px;
+
+  transition: 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.input-group input:focus {
+  border-color: #8b5cf6;
+
+  box-shadow:
+    0 0 0 3px rgba(124, 58, 237, 0.15),
+    0 0 20px rgba(124, 58, 237, 0.2);
+}
+
+
+/* =========================
+   SIGNUP BUTTON
+========================= */
+
+.signup-btn {
+  width: 100%;
+
+  margin-top: 5px;
+
+  padding: 12px 15px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6366f1,
+    #3b82f6
+  );
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  transition: 0.3s ease;
+}
+
+.signup-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(99, 102, 241, 0.4);
+}
+
+.arrow {
+  font-size: 17px;
+
+  transition: 0.3s ease;
+}
+
+.signup-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================
+   LOGIN TEXT
+========================= */
+
+.login-text {
+  margin-top: 17px;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 11px;
+}
+
+.login-text span {
+  color: #a78bfa;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   SUCCESS TOAST
+========================= */
+/* =========================
+   SUCCESS TOAST
+========================= */
+
+.success-box {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+
+  width: 235px;
+  height: 48px;
+
+  padding: 0px 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  border-radius: 20px;
+
+  background: #22c55e;
+
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 99999;
+  animation: successSlide 0.4s ease;
+
+}
+
+
+/* CHECK */
+
+.success-icon {
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+
+/* MESSAGE */
+
+.success-message {
+  flex: 1;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* CLOSE */
+
+.success-close {
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 17px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  opacity: 0.9;
+}
+
+.success-close:hover {
+  opacity: 1;
+}
+
+
+/* ANIMATION */
+
+@keyframes successSlide {
+  from {
+    opacity: 0;
+
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================
+   SUCCESS ICON
+========================= */
+
+.success-icon {
+  width: 22px;
+
+  height: 22px;
+
+  flex-shrink: 0;
+
+  margin: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  box-shadow: none;
+
+  animation: none;
+}
+
+
+/* =========================
+   SUCCESS TITLE
+========================= */
+
+.success-box h1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+
+/* =========================
+   HIDE SUCCESS DESCRIPTION
+========================= */
+
+.success-box p {
+  display: none;
+}
+
+
+/* =========================
+   HIDE CONTINUE BUTTON
+========================= */
+
+.success-btn {
+  display: none;
+}
+
+
+/* =========================
+   SUCCESS ANIMATION
+========================= */
+
+@keyframes successSlide {
+  0% {
+    opacity: 0;
+
+    transform: translateX(40px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .register-card {
+    width: calc(100vw - 50px);
+
+    max-width: 320px;
+
+    padding: 24px;
+  }
+
+  .register-header h1 {
+    font-size: 27px;
+  }
+
+  .register-header p {
+    font-size: 11px;
+  }
+
+  .success-box {
+    right: 15px;
+
+    bottom: 15px;
+
+    width: 220px;
+  }
+}

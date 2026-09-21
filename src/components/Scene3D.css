@@ -1,0 +1,64 @@
+.scene-container {
+  position: absolute;
+
+  width: 500px;
+  height: 650px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  /* Improve rendering performance */
+  contain: layout paint;
+}
+
+.scene-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1000px) {
+  .scene-container {
+    width: 500px;
+    height: 650px;
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 999px) {
+  .scene-container {
+    width: 420px;
+    height: 580px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .scene-container {
+    width: 330px;
+    height: 480px;
+
+    left: 50%;
+    top: 42%;
+  }
+}
