@@ -5,9 +5,9 @@ import { LoopOnce } from "three";
 function Character({ onAnimationComplete }) {
   const group = useRef();
 
-  const { scene, animations } = useGLTF(
-    "/models/character.glb"
-  );
+  const modelPath = `${import.meta.env.BASE_URL}models/character.glb`;
+
+  const { scene, animations } = useGLTF(modelPath);
 
   const { actions } = useAnimations(
     animations,
@@ -41,6 +41,10 @@ function Character({ onAnimationComplete }) {
     action.setLoop(LoopOnce, 1);
     action.clampWhenFinished = true;
     action.play();
+        const formTimer = setTimeout(() => {
+  onAnimationComplete?.();
+}, 6000);
+
 
     console.log(
       "Playing animation:",
@@ -51,7 +55,6 @@ function Character({ onAnimationComplete }) {
 
     const handleFinished = () => {
       console.log("Animation completed");
-
       onAnimationComplete?.();
     };
 
@@ -82,7 +85,7 @@ function Character({ onAnimationComplete }) {
 }
 
 useGLTF.preload(
-  "/models/character.glb"
+  `${import.meta.env.BASE_URL}models/character.glb`
 );
 
 export default Character;
