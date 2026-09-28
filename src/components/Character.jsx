@@ -40,10 +40,11 @@ function Character({ onAnimationComplete }) {
     action.reset();
     action.setLoop(LoopOnce, 1);
     action.clampWhenFinished = true;
+    action.setEffectiveTimeScale(1.3);
     action.play();
         const formTimer = setTimeout(() => {
   onAnimationComplete?.();
-}, 6000);
+}, 4000);
 
 
     console.log(
